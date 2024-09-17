@@ -3,8 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import './index.css'
 
-import Home from "./pages/Home"
-import Not_Found from './pages/not-found';
+import Home from "./pages/Home";
+import Not_Found from './pages/Not-found';
+import Details from './pages/Details';
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
     {
         path: "*",
         element: <Not_Found />,
+    },
+    {
+        path: "/details/:id",
+        element: <Details />
     }
 ]);
 

@@ -1,7 +1,36 @@
 .hotelCardContainer {
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
     margin: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.285);
+    border-radius: 10px;
+}
+
+.hotelCardContainer span {
+    font-size: 12px;
+    margin: -3px;
+}
+
+.hotelCardImg {
+    width: 300px;
+    overflow: hidden;
+}
+
+.hotelCardContainer p{
+    padding: 10px;
+}
+
+.hotelCardName {
+    padding: 10px;
+}
+
+.hotelCardPrice {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }

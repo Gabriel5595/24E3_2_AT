@@ -29,15 +29,18 @@ export default function Home() {
             <Header />
             <div className={styles.hotelsContainer}>
                 {
-                    list.map((hotel, index) => (
+                    list.map((hotel) => (
                         <HotelCard
-                            key={index}
-                            name={hotel.nome}
-                            image={hotel.imagem}
-                            classification={hotel.classificacao}
-                            state={hotel.estado}
-                            city={hotel.cidade}
-                            price={hotel.precoDiaria.toFixed(2)} />
+                            key={hotel.id}
+                            hotel={hotel}
+
+                            // name={hotel.nome}
+                            // image={hotel.imagem}
+                            // classification={hotel.classificacao}
+                            // state={hotel.estado}
+                            // city={hotel.cidade}
+                            // price={hotel.precoDiaria.toFixed(2)} 
+                            />
                     ))
                 }
             </div>
