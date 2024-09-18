@@ -11,10 +11,10 @@ import Header from "../../components/Header/Header"
 export default function Details() {
 
     const [hotelSpec, setHotelSpec] = useState({})
-    const { id } = useParams();
-    const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [fadeOut, setFadeOut] = useState(false);
+    const { id } = useParams();
+    const navigate = useNavigate();
 
     function getProductDeatils(id) {
         const hotels = JSON.parse(localStorage.getItem("@hotels"));
