@@ -1,37 +1,47 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
 
 import styles from "./details.module.css"
 
 import Header from "../../components/Header/Header"
 
-
-const mock =
-{
-    nome: "Hotel Paraíso",
-    imagem: "https://via.placeholder.com/150",
-    classificacao: 5,
-    cidade: "Rio de Janeiro",
-    estado: "RJ",
-    precoDiaria: 450
-}
-
 export default function Details() {
 
     const [hotelSpec, setHotelSpec] = useState({})
     const { id } = useParams();
+    const navigate = useNavigate();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [fadeOut, setFadeOut] = useState(false);
 
     function getProductDeatils(id) {
         const hotels = JSON.parse(localStorage.getItem("@hotels"));
-        console.log(hotels)
         if (hotels) {
             const selectedHotel = hotels.find((hotel) => hotel.id === parseInt(id));
-            console.log(selectedHotel)
             return selectedHotel
         } else {
             console.log("No information found.");
         }
     };
+
+    function deleteProduct(id) {
+        const hotels = JSON.parse(localStorage.getItem("@hotels"));
+        const updatedHotelList = hotels.filter((hotel) => hotel.id !== parseInt(id));
+        localStorage.setItem('@hotels', JSON.stringify(updatedHotelList));
+        
+        setIsModalOpen(true);
+
+        
+        setTimeout(() => {
+            setFadeOut(true);
+            setTimeout(() => {
+                setIsModalOpen(false);
+                navigate('/');
+            }, 1000);
+        }, 2000);
+    }
 
     useEffect(() => {
         const hotelDetails = getProductDeatils(id)
@@ -47,7 +57,7 @@ export default function Details() {
             <Header />
 
             <div className={styles.detailContentContainer}>
-                
+
                 <div className={styles.detailImgContainer}>
                     <img src={hotelSpec.image} alt="Image placeholder" />
                 </div>
@@ -61,11 +71,22 @@ export default function Details() {
 
                     <div className={styles.detailButtons}>
                         <button>Edit</button>
-                        <button>Delete</button>
+                        <button onClick={() => deleteProduct(id)}>Delete</button>
                     </div>
                 </div>
 
-                
+                <Modal
+                    open={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                    center
+                    showCloseIcon={false}
+                    classNames={{
+                        overlay: styles.customOverlay,
+                        modal: `${styles.customModal} ${fadeOut ? styles.fadeOut : ''}`,
+                    }}
+                >
+                    <h2>Hotel deletado com sucesso!</h2>
+                </Modal>
             </div>
         </div>
 

@@ -52,3 +52,26 @@
     background-color: #164294;
     color: white;
 }
+
+/* styles.module.css */
+
+/* Estilo básico do modal */
+.customModal {
+    padding: 20px;
+    background-color: #f8d7da; /* Cor de fundo do alerta */
+    color: #721c24; /* Cor do texto */
+    border-radius: 10px;
+    text-align: center;
+    transition: opacity 1s ease-out; /* Transição para o efeito fade-out */
+    opacity: 1; /* Opacidade inicial */
+}
+
+/* Estilo para o efeito de fade-out */
+.fadeOut {
+    opacity: 0; /* Quando fadeOut for true, a opacidade se torna 0 */
+}
+
+/* Customização do overlay */
+.customOverlay {
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro para destacar o pop-up */
+}
