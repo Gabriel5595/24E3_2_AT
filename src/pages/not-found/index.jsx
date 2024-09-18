@@ -9,8 +9,8 @@ export default function Not_Found() {
 
     return(
         <div>
-            <h1>Ops... Não encontramos esta página =(...</h1>
-            <button onClick={goBack}>Voltar para a tela inicial</button>
+            <h1>Ops... There is nothing here =(...</h1>
+            <button onClick={goBack}>Return to Home</button>
         </div>
     )
 }

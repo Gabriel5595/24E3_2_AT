@@ -53,25 +53,80 @@
     color: white;
 }
 
-/* styles.module.css */
-
-/* Estilo básico do modal */
-.customModal {
+.customModalEdit {
     padding: 20px;
-    background-color: #f8d7da; /* Cor de fundo do alerta */
-    color: #721c24; /* Cor do texto */
+    background-color: #d7daf8;
+    color: #1c4172;
     border-radius: 10px;
     text-align: center;
-    transition: opacity 1s ease-out; /* Transição para o efeito fade-out */
-    opacity: 1; /* Opacidade inicial */
+    transition: opacity 1s ease-out;
+    opacity: 1;
 }
 
-/* Estilo para o efeito de fade-out */
+.customModalDelete {
+    padding: 20px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 10px;
+    text-align: center;
+    transition: opacity 1s ease-out;
+    opacity: 1;
+}
+
+
 .fadeOut {
-    opacity: 0; /* Quando fadeOut for true, a opacidade se torna 0 */
+    opacity: 0;
 }
 
-/* Customização do overlay */
+
 .customOverlay {
-    background: rgba(0, 0, 0, 0.5); /* Fundo escuro para destacar o pop-up */
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.modalContainer input, textarea {
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border: 1px solid #888;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.modalContainer h3 {
+    margin-bottom: 10px;
+}
+
+.modalContainer .modalInputRow, .modalButtonRow {
+    display: flex;
+    gap: 10px;
+}
+
+.modalContainer textarea {
+    resize: none;
+    height: 100px;
+    padding: 10px;
+}
+
+
+.modalContainer button {
+    border: 0;
+    padding: 7px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modalContainer button:first-child {
+    background-color: #246ff9;
+}
+
+.modalContainer button:last-child {
+    border: 1px solid #246ff9;
+    color: black;
+}
+
+.modalContainer button:hover {
+    background-color: #164294;
+    color: white;
 }
