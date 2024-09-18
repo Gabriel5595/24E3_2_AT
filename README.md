@@ -23,13 +23,13 @@ Desenvolva um formulário de cadastro para permitir a adição de novos hotéis 
 6. ~~Cadastro de hotéis: Funcionalidade~~
 Implemente a funcionalidade que permita ao usuário submeter o formulário de cadastro. Quando o formulário for enviado, os dados do novo hotel devem ser salvos no localStorage e a lista de hotéis na tela de listagem deve ser atualizada automaticamente para refletir a inclusão do novo hotel.
 
-7. Edição de hotéis: Formulário
+7. ~~Edição de hotéis: Formulário~~
 Crie um formulário de edição que permita modificar os dados de um hotel existente. O formulário deve ser capaz de exibir os dados atuais do hotel e permitir que o usuário faça alterações nos campos como nome, imagem, classificação, cidade, estado, preço da diária e descrição. Certifique-se de que o formulário permita uma edição eficaz e que seja intuitivo para o usuário.
 
-8. Edição de hotéis: Funcionalidade
+8. ~~Edição de hotéis: Funcionalidade~~
 Implemente a funcionalidade para que, ao submeter o formulário de edição, as alterações feitas nos dados do hotel sejam salvas no localStorage. Atualize a tela de listagem e a tela de detalhes para refletir as modificações feitas no hotel.
 
-9. Exclusão de hotéis
+9. ~~Exclusão de hotéis~~
 Desenvolva a funcionalidade para excluir um hotel do sistema. Permita que o usuário selecione um hotel e o remova da lista. A exclusão deve refletir imediatamente na tela de listagem e os dados do hotel excluído devem ser removidos do localStorage.
 
 10. Adicionar Funcionalidade de Pesquisa

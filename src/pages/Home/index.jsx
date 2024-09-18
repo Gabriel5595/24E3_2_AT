@@ -10,6 +10,7 @@ import HotelCard from "../../components/HotelCard/index.jsx";
 
 export default function Home() {
 
+    const [search, setSearch] = useState("");
     const [isOpen, setIsOpen] = useState(false)
     const [list, setlist] = useState([])
     const [formData, setFormData] = useState({
@@ -55,16 +56,16 @@ export default function Home() {
         }
 
         const newHotel = {
-                id: newId,
-                name: formData.name,
-                image: formData.image,
-                classification: formData.classification,
-                city: formData.city,
-                state: formData.state,
-                price: formData.price,
-                description: formData.description,
-            }
-    
+            id: newId,
+            name: formData.name,
+            image: formData.image,
+            classification: formData.classification,
+            city: formData.city,
+            state: formData.state,
+            price: formData.price,
+            description: formData.description,
+        }
+
         console.log(newHotel)
 
         const updatedList = [...objectList, newHotel];
@@ -74,19 +75,35 @@ export default function Home() {
         closeModal();
     }
 
+    function filterHotels(list, search) {
+        return list.filter(function (hotel) {
+            return hotel.name.toLowerCase().includes(search.toLowerCase());
+        });
+    }
+
+    const filteredHotels = filterHotels(list, search);
+
     useEffect(() => { retrieveHotelList() }, [])
 
     return (
         <div className={styles.mainContainer}>
-            <Header />
+            <Header setSearch={setSearch} />
             <div className={styles.hotelsContainer}>
 
                 {
-                    list.map((hotel) => (
-                        <HotelCard
-                            key={hotel.id}
-                            hotel={hotel} />
-                    ))
+
+                    filteredHotels.map(function (hotel) {
+                        return (
+                            <HotelCard
+                                key={hotel.id}
+                                hotel={hotel} />
+                        );
+                    })
+                    // list.map((hotel) => (
+                    //     <HotelCard
+                    //         key={hotel.id}
+                    //         hotel={hotel} />
+                    // ))
                 }
             </div>
 
@@ -99,7 +116,7 @@ export default function Home() {
                 onClose={closeModal}>
                 <div className={styles.modalContainer}>
                     <h3>Register new hotel</h3>
-                    
+
                     <input
                         placeholder="Hotel name"
                         value={formData.name}
@@ -139,7 +156,7 @@ export default function Home() {
                                     { ...formData, city: event.target.value }
                                 )
                             }
-                            />
+                        />
                         <input
                             placeholder="State (UF)"
                             value={formData.state}
@@ -148,18 +165,18 @@ export default function Home() {
                                     { ...formData, state: event.target.value }
                                 )
                             }
-                            />
+                        />
                     </div>
 
                     <input
                         placeholder="image's URL"
                         value={formData.image}
-                            onChange={
-                                (event) => setFormData(
-                                    { ...formData, image: event.target.value }
-                                )
-                            }
-                        />
+                        onChange={
+                            (event) => setFormData(
+                                { ...formData, image: event.target.value }
+                            )
+                        }
+                    />
 
                     <textarea
                         placeholder="Description"

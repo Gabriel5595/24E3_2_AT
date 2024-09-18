@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    justify-content: space-between; /* Adiciona espaçamento entre título e input */
     align-items: center;
     width: 100vw;
     height: 60px;
@@ -10,4 +11,12 @@
 
 .header h1 {
     font-size: 1.5em;
+}
+
+.searchInput {
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #888;
+    width: 200px; /* Largura do input */
 }
