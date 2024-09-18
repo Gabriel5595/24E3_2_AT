@@ -6,7 +6,9 @@ export default function HotelCard(props) {
     return (
         <Link to={`details/${props.hotel.id}`} className={styles.link}>
             <div className={styles.hotelCardContainer}>
-                <h3 className={styles.hotelCardName}>{props.hotel.name}</h3>
+                <div className={styles.hotelCardTitle}>
+                    <h3 className={styles.hotelCardName}>{props.hotel.name}</h3>
+                </div>
                 <img
                     src={props.hotel.image}
                     alt="Image placeholder"

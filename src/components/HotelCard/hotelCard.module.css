@@ -8,6 +8,10 @@
     border-radius: 10px;
 }
 
+.hotelCardTitle {
+    height: 60px;
+}
+
 .hotelCardContainer span {
     font-size: 12px;
     margin: -3px;

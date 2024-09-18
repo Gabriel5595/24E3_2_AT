@@ -49,7 +49,7 @@ export default function Details() {
                 setIsDeleteConfirmationModalOpen(false);
                 navigate('/');
             }, 1000);
-        }, 2000);
+        }, 500);
     }
 
     function openEditModal() {
@@ -82,9 +82,8 @@ export default function Details() {
             setFadeOut(true);
             setTimeout(() => {
                 setIsEditConfirmationModalOpen(false);
-                navigate('/');
             }, 1000);
-        }, 2000);
+        }, 500);
     }
 
     useEffect(() => {

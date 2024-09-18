@@ -32,7 +32,7 @@ Implemente a funcionalidade para que, ao submeter o formulário de edição, as 
 9. ~~Exclusão de hotéis~~
 Desenvolva a funcionalidade para excluir um hotel do sistema. Permita que o usuário selecione um hotel e o remova da lista. A exclusão deve refletir imediatamente na tela de listagem e os dados do hotel excluído devem ser removidos do localStorage.
 
-10. Adicionar Funcionalidade de Pesquisa
+10. ~~Adicionar Funcionalidade de Pesquisa~~
 Implemente uma funcionalidade de pesquisa na tela de listagem de hotéis. Permita que os usuários filtrem a lista de hotéis com base no nome. Certifique-se de que a pesquisa seja realizada em tempo real, à medida que o usuário digita na barra de pesquisa.
 
 11. Ordenar a Lista de hotéis
