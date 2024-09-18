@@ -18,7 +18,7 @@ const mock =
 
 export default function Details() {
 
-    const [productSpec, setProductSpec] = useState({})
+    const [hotelSpec, setHotelSpec] = useState({})
     const { id } = useParams();
 
     function getProductDeatils(id) {
@@ -36,8 +36,8 @@ export default function Details() {
     useEffect(() => {
         const hotelDetails = getProductDeatils(id)
         console.log(hotelDetails)
-        setProductSpec(hotelDetails)
-        console.log(productSpec)
+        setHotelSpec(hotelDetails)
+        console.log(hotelSpec)
     }, [])
 
     return (
@@ -46,18 +46,26 @@ export default function Details() {
 
             <Header />
 
-            <div className={styles.DetailContentContainer}>
+            <div className={styles.detailContentContainer}>
                 
-                <div className={styles.DetailImgContainer}>
-                    <img src={productSpec.image} alt="Image placeholder" />
+                <div className={styles.detailImgContainer}>
+                    <img src={hotelSpec.image} alt="Image placeholder" />
                 </div>
 
-                <div className={styles.DetailTextContainer}>
-                    <h2>{productSpec.name}</h2>
-                    <p>Classification: {productSpec.classification}/5</p>
-                    <p>${productSpec.price}</p>
-                    <p>{productSpec.state} - {productSpec.city}</p>
+                <div className={styles.detailTextContainer}>
+                    <h2>{hotelSpec.name}</h2>
+                    <p>Classification: {hotelSpec.classification}/5</p>
+                    <p>${hotelSpec.price}</p>
+                    <p>{hotelSpec.state} - {hotelSpec.city}</p>
+                    <p>{hotelSpec.description}</p>
+
+                    <div className={styles.detailButtons}>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
                 </div>
+
+                
             </div>
         </div>
 

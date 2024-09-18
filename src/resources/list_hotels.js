@@ -6,7 +6,8 @@ const list_hotel = [
         classification: 5,
         city: "Rio de Janeiro",
         state: "RJ",
-        price: 450
+        price: 450,
+        description: "Um refúgio luxuoso com vista para o mar, oferecendo acomodações confortáveis e serviços de alta qualidade no coração do Rio de Janeiro."
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const list_hotel = [
         classification: 4,
         city: "Florianópolis",
         state: "SC",
-        price: 320
+        price: 320,
+        description: "Situada em Florianópolis, esta pousada charmosa oferece uma atmosfera acolhedora e relaxante, perfeita para quem busca paz e tranquilidade."
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const list_hotel = [
         classification: 5,
         city: "Salvador",
         state: "BA",
-        price: 600
+        price: 600,
+        description: "Com uma localização privilegiada à beira-mar, este resort em Salvador oferece luxo, conforto e uma vista incrível do oceano."
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const list_hotel = [
         classification: 3,
         city: "São Paulo",
         state: "SP",
-        price: 280
+        price: 280,
+        description: "Um hotel prático e econômico no centro de São Paulo, ideal para viajantes a negócios e turistas que desejam estar perto das principais atrações."
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ const list_hotel = [
         classification: 4,
         city: "Campos do Jordão",
         state: "SP",
-        price: 350
+        price: 350,
+        description: "Este chalé acolhedor em Campos do Jordão oferece uma experiência única em meio às montanhas, perfeita para quem deseja relaxar e curtir a natureza."
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ const list_hotel = [
         classification: 2,
         city: "Curitiba",
         state: "PR",
-        price: 100
+        price: 100,
+        description: "Um hostel acessível e vibrante em Curitiba, perfeito para mochileiros e aventureiros que buscam conforto a um preço acessível."
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ const list_hotel = [
         classification: 3,
         city: "Recife",
         state: "PE",
-        price: 220
+        price: 220,
+        description: "Localizada próximo à praia, esta pousada oferece conforto e praticidade, sendo ideal para quem quer explorar Recife e relaxar à beira-mar."
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ const list_hotel = [
         classification: 5,
         city: "Belo Horizonte",
         state: "MG",
-        price: 550
+        price: 550,
+        description: "Com um serviço impecável e acomodações sofisticadas, este hotel em Belo Horizonte é a escolha perfeita para quem busca luxo e conforto."
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ const list_hotel = [
         classification: 1,
         city: "Manaus",
         state: "AM",
-        price: 80
+        price: 80,
+        description: "Uma opção simples e econômica em Manaus, ideal para quem precisa de um lugar básico para dormir enquanto explora a cidade."
     },
     {
         id: 10,
@@ -87,7 +96,8 @@ const list_hotel = [
         classification: 3,
         city: "Gramado",
         state: "RS",
-        price: 300
+        price: 300,
+        description: "Uma pousada tranquila e acolhedora em Gramado, com uma bela vista para o lago, perfeita para quem busca relaxamento e contato com a natureza."
     }
 ];
 

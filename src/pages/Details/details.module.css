@@ -3,16 +3,52 @@
     flex-direction: column;
 }
 
-.DetailContentContainer {
+.detailContentContainer {
     display: flex;
     margin: 50px;
-    max-width: 400px;
+    max-width: 700px;
 }
 
-.DetailTextContainer {
+.detailImgContainer img {
+    width: 300px;
+}
+
+.detailTextContainer {
     margin-left: 30px;
 }
 
-.DetailTextContainer p {
+.detailTextContainer p {
     padding: 5px;
+}
+
+.detailTextContainer p:nth-child(5) {
+    text-align: justify;
+}
+
+.detailButtons {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.detailButtons button {
+    width: 100px;
+    border: 0;
+    padding: 7px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.detailButtons :first-child {
+    background-color: #246ff9;
+}
+
+.detailButtons :last-child {
+    border: 1px solid #246ff9;
+    color: black;
+}
+
+.detailButtons button:hover {
+    background-color: #164294;
+    color: white;
 }
