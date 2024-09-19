@@ -9,7 +9,8 @@
     flex-wrap: wrap;
 }
 
-.modalContainer input, textarea {
+.modalContainer input,
+textarea {
     width: 100%;
     height: 35px;
     border: 0;
@@ -30,7 +31,7 @@
     font-size: 1.5rem;
     border-radius: 25px;
     border: none;
-    box-shadow: 50px 52px 54px -24px rgba(0,0,0,0.1);
+    box-shadow: 50px 52px 54px -24px rgba(0, 0, 0, 0.1);
     position: fixed;
     right: 10px;
     bottom: 10px;
@@ -43,7 +44,8 @@
     color: white;
 }
 
-.modalContainer .modalInputRow, .modalButtonRow {
+.modalContainer .modalInputRow,
+.modalButtonRow {
     display: flex;
     gap: 10px;
 }
@@ -74,4 +76,15 @@
 .modalContainer button:hover {
     background-color: #164294;
     color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: rgb(49, 49, 49);
+        --text-color: white;
+    }
+
+    .modalContainer {
+        color: rgb(0, 0, 0);
+    }
 }

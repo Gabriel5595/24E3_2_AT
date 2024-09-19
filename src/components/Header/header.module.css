@@ -1,12 +1,12 @@
 .header {
     display: flex;
-    justify-content: space-between; /* Adiciona espaçamento entre título e input */
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
     height: 60px;
     background-color: #2459f9;
     padding: 10px 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
@@ -18,5 +18,17 @@
     padding: 0 10px;
     border-radius: 5px;
     border: 1px solid #888;
-    width: 200px; /* Largura do input */
+    width: 200px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .header {
+        background-color: #0c256e;
+    }
+
+    .searchInput {
+        background-color: #333;
+        color: #fff;
+        border-color: #555;
+    }
 }
