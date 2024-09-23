@@ -1,0 +1,25 @@
+.filtersContainer {
+    height: 3vw;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    align-items: center;
+    background-color: #127adb
+}
+
+.filtersSelector {
+    height: 25px;
+    margin: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .filtersContainer {
+        background-color: #0e329c;
+    }
+
+    .filtersSelector {
+        background-color: #333;
+        color: #fff;
+        border-color: #555;
+    }
+}

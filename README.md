@@ -35,13 +35,13 @@ Desenvolva a funcionalidade para excluir um hotel do sistema. Permita que o usu�
 10. ~~Adicionar Funcionalidade de Pesquisa~~
 Implemente uma funcionalidade de pesquisa na tela de listagem de hotéis. Permita que os usuários filtrem a lista de hotéis com base no nome. Certifique-se de que a pesquisa seja realizada em tempo real, à medida que o usuário digita na barra de pesquisa.
 
-11. Ordenar a Lista de hotéis
+11. ~~Ordenar a Lista de hotéis~~
 Adicione uma opção para ordenar a lista de hotéis por preço da diária ou por classificação. Inclua um seletor no topo da tela de listagem que permita ao usuário escolher o critério de ordenação desejado.
 
 12. Implementar Feedback de Validação no Formulário
 Adicione validação de formulário ao cadastrar e editar hotéis. Garanta que o usuário receba feedback visual se tentar submeter o formulário com campos obrigatórios vazios ou com dados inválidos (por exemplo, preços negativos).
 
-13. Mostrar Mensagens de Sucesso e Erro
+13. ~~Mostrar Mensagens de Sucesso e Erro~~
 Implemente mensagens de feedback para operações como cadastro, edição e exclusão de hotéis. Mostre uma mensagem de sucesso quando uma operação for concluída com êxito e uma mensagem de erro se houver um problema (por exemplo, falha ao salvar no localStorage).
 
 14. Adicionar Funcionalidade de Favoritos

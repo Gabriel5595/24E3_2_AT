@@ -7,12 +7,14 @@ import 'react-responsive-modal/styles.css';
 import Header from "../../components/Header/Header";
 import listHotels from "../../resources/list_hotels.js";
 import HotelCard from "../../components/HotelCard/index.jsx";
+import Filters from "../../components/Filters/index.jsx";
 
 export default function Home() {
 
     const [search, setSearch] = useState("");
     const [isOpen, setIsOpen] = useState(false)
     const [list, setlist] = useState([])
+    const [order, setOrder] = useState("")
     const [formData, setFormData] = useState({
         id: "",
         name: "",
@@ -81,18 +83,30 @@ export default function Home() {
         });
     }
 
+    function orderHotels(hotels) {
+        if (order === "price") {
+            return [...hotels].sort((a, b) => a.price - b.price);
+        }
+        if (order === "classification") {
+            return [...hotels].sort((a, b) => b.classification - a.classification);
+        }
+        return hotels;
+    }
+
     const filteredHotels = filterHotels(list, search);
+    const orderedHotels = orderHotels(filteredHotels);
 
     useEffect(() => { retrieveHotelList() }, [])
 
     return (
         <div className={styles.mainContainer}>
             <Header setSearch={setSearch} />
+            <Filters setOrder={setOrder} />
             <div className={styles.hotelsContainer}>
 
                 {
 
-                    filteredHotels.map(function (hotel) {
+                    orderedHotels.map(function (hotel) {
                         return (
                             <HotelCard
                                 key={hotel.id}
