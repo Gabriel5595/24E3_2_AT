@@ -1,5 +1,5 @@
 .filtersContainer {
-    height: 3vw;
+    height: 40px;
     display: flex;
     justify-content: right;
     gap: 20px;
